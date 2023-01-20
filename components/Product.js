@@ -16,7 +16,16 @@ function Product({ product }) {
       </Title>
       <PriceTag>{formatMoney(product.price)}</PriceTag>
       <p>{product.description}</p>
-      {/* todo add button for edit and delete */}
+      <div className="buttonList">
+        <Link
+          href={{
+            pathname: 'update',
+            query: { id: product.id },
+          }}
+        >
+          Edit
+        </Link>
+      </div>
     </ItemStyles>
   );
 }
