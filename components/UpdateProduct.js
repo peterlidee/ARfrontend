@@ -45,11 +45,15 @@ function UpdateProduct({ id }) {
     { loading: updateLoading, error: updateError, data: updateData },
   ] = useMutation(UPDATE_PRODUCT_MUTATION);
 
-  // create some state for form inputs
+  // 3. create some state for form inputs
   const { inputs, handleChange, resetForm, clearForm } = useForm(data?.Product);
 
+  console.log('query', { loading, error, data });
+
   if (loading) return <p>...loading</p>;
-  // 3. form to handle update
+  // 4. form to handle update
+
+  console.log('inputs', { inputs });
 
   return (
     <Form
