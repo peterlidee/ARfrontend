@@ -5,6 +5,7 @@ import { useUser } from './User';
 
 function Nav() {
   const user = useUser();
+  console.log('user', user);
   return (
     <NavStyles>
       <Link href="/products">
