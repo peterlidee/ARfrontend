@@ -22,7 +22,9 @@ function Pagination({ page }) {
   const pageCount = Math.ceil(count / perPage);
   return (
     <PaginationStyles>
-      <Head>Sick Fits - Page {page} of ____</Head>
+      <Head>
+        Sick Fits - Page {page} of {pageCount}
+      </Head>
       <Link href={`/products/${page - 1}`}>
         <a aria-disabled={page <= 1}>prev</a>
       </Link>
