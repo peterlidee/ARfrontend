@@ -28,7 +28,7 @@ export function CartItem({ cartItem }) {
   return (
     <CartItemStyles>
       <img
-        scr={product.photo.publicUrlTransformed}
+        src={product.photo.image.publicUrlTransformed}
         alt={product.name}
         width="100"
       />
